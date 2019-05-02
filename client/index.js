@@ -1,6 +1,6 @@
 const request = require('request');
 
-const period = 1 * 120; // 2min
+const period = 1000 * 120; // 2min
 function genSendIPOptions(id, ip){
 	return {
 		uri: 'http://getip.sousys.com',
@@ -19,10 +19,10 @@ setInterval(()=>{
     request(getIPOptions, (error, response, data)=>{
 	    if(data != null){
 	    	let option = genSendIPOptions("rpi", data);
-		console.log(option);
+		// console.log(option);
 		request(option, (err, res, data)=>{
 		
-		}
+		});
 	    }
     });
 }, period);

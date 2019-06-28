@@ -7,5 +7,6 @@ console.log(x);
 
 ```csharp
 var data = new List<int>();
+var s = "qinnna";
 Console.WriteLine(data.Count());
 ```
